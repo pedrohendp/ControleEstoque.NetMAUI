@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ControllerEstoque.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ControllerEstoque"
+    xmlns:views="clr-namespace:ControllerEstoque.Views">
+
+    <ShellContent
+        Title="Sample"
+        ContentTemplate="{DataTemplate views:SamplePage}"
+        Icon="iconsample.png"
+        Route="SamplePage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="ListDetail"
+        ContentTemplate="{DataTemplate views:ListDetailPage}"
+        Icon="iconlistdetail.png"
+        Route="ListDetailPage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="WebView"
+        ContentTemplate="{DataTemplate views:WebViewPage}"
+        Icon="iconwebview.png"
+        Route="WebViewPage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="Blank"
+        ContentTemplate="{DataTemplate views:BlankPage}"
+        Icon="iconblank.png"
+        Route="BlankPage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="Localization"
+        ContentTemplate="{DataTemplate views:LocalizationPage}"
+        Icon="iconlocalization.png"
+        Route="LocalizationPage"
+        Shell.NavBarIsVisible="true" />
+    <ShellContent
+        Title="Drawing"
+        ContentTemplate="{DataTemplate views:DrawingPage}"
+        Icon="icondrawing.png"
+        Route="DrawingPage"
+        Shell.NavBarIsVisible="true" />
+</Shell>

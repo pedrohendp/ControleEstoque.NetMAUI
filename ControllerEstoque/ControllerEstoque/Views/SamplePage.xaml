@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ControllerEstoque.Views.SamplePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ControllerEstoque.ViewModels"
+    x:DataType="vm:SampleViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                Margin="0,0,2,0"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Hello, World!" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Welcome to .NET Multi-platform App UI" />
+
+            <Button
+                Command="{Binding CounterClickedCommand}"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="{Binding Message}" />
+
+            <Button
+                x:Name="fabButton"
+                Margin="0,0,16,16"
+                AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Red"
+                Clicked="OnFabButtonClicked"
+                CornerRadius="50"
+                FontSize="28"
+                HeightRequest="64"
+                HorizontalOptions="End"
+                Text="+"
+                TextColor="White"
+                VerticalOptions="End"
+                WidthRequest="64" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
