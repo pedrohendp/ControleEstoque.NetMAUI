@@ -3,9 +3,26 @@
     x:Class="ControllerEstoque.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fs="http://xamarin.com/schemas/2014/forms"
     xmlns:local="clr-namespace:ControllerEstoque"
-    xmlns:views="clr-namespace:ControllerEstoque.Views">
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:views="clr-namespace:ControllerEstoque.Views"
+    xmlns:xs="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <Shell.FlyoutHeader FlyoutHeaderBehavior="CollapseOnScroll">
+        <Grid BackgroundColor="Black">
+            <Image
+                Aspect="AspectFill"
+                Opacity="0.6"
+                Source="boxsup.svg" />
+            <Label
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="Controle de Estoque 🥷"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+        </Grid>
+    </Shell.FlyoutHeader>
     <ShellContent
         Title="Sample"
         ContentTemplate="{DataTemplate views:SamplePage}"
@@ -42,4 +59,20 @@
         Icon="icondrawing.png"
         Route="DrawingPage"
         Shell.NavBarIsVisible="true" />
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding SaudacaoAtual}"
+                    TextColor="GhostWhite" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{}{0:dd MMMM yyyy}'}"
+                    TextColor="GhostWhite" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
 </Shell>
