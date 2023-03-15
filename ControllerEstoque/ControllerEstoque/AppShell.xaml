@@ -12,33 +12,38 @@
     <Shell.FlyoutHeader FlyoutHeaderBehavior="CollapseOnScroll">
         <Grid BackgroundColor="Black">
             <Image
+                Margin="0,0,280,0"
                 Aspect="AspectFill"
+                HorizontalOptions="Center"
+                IsAnimationPlaying="True"
                 Opacity="0.6"
-                Source="boxsup.svg" />
+                Source="emestoque.png"
+                VerticalOptions="Center" />
             <Label
+                Margin="70,0,0,0"
                 FontAttributes="Bold"
-                HorizontalTextAlignment="Center"
-                Text="Controle de Estoque 🥷"
+                HorizontalTextAlignment="Start"
+                Text="Controle de Estoque ✅"
                 TextColor="White"
                 VerticalTextAlignment="Center" />
         </Grid>
     </Shell.FlyoutHeader>
     <ShellContent
-        Title="Sample"
+        Title="Página inicial"
         ContentTemplate="{DataTemplate views:SamplePage}"
-        Icon="iconsample.png"
+        Icon="homePage.png"
         Route="SamplePage"
         Shell.NavBarIsVisible="true" />
     <ShellContent
-        Title="ListDetail"
+        Title="Cadastro de produtos"
         ContentTemplate="{DataTemplate views:ListDetailPage}"
-        Icon="iconlistdetail.png"
+        Icon="caixa.png"
         Route="ListDetailPage"
         Shell.NavBarIsVisible="true" />
     <ShellContent
-        Title="WebView"
+        Title="Meus clientes"
         ContentTemplate="{DataTemplate views:WebViewPage}"
-        Icon="iconwebview.png"
+        Icon="clientes.png"
         Route="WebViewPage"
         Shell.NavBarIsVisible="true" />
     <ShellContent
@@ -66,12 +71,12 @@
                 <Label
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
-                    Text="{Binding SaudacaoAtual}"
-                    TextColor="GhostWhite" />
+                    Text="Controle de estoque"
+                    TextColor="Black" />
                 <Label
                     HorizontalOptions="Center"
                     Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{}{0:dd MMMM yyyy}'}"
-                    TextColor="GhostWhite" />
+                    TextColor="Black" />
             </StackLayout>
         </DataTemplate>
     </Shell.FlyoutFooterTemplate>
